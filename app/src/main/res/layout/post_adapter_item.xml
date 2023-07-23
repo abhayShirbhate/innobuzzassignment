@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="post"
+            type="com.abhay.innobuzzassignment.post_listing.model.Post" />
+    </data>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:neumorph_shadowColorLight="@color/bg_grey"
+        app:neumorph_backgroundColor="@color/white"
+        style="@style/ShapeAppearance.Neumorph.CardView"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_strokeColor="@color/hint_grey"
+        app:neumorph_strokeWidth="1dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:text="@{post.title}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+</layout>

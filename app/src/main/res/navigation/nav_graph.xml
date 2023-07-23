@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/postListingFragment">
+
+    <fragment
+        android:id="@+id/postListingFragment"
+        android:name="com.abhay.innobuzzassignment.post_listing.fragment.PostListingFragment"
+        android:label="PostListingFragment" >
+        <action
+            android:id="@+id/action_postListingFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment"
+            app:popUpToInclusive="false"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.abhay.innobuzzassignment.post_details.fragment.PostDetailsFragment"
+        android:label="PostDetailsFragment" />
+</navigation>
